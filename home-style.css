@@ -69,7 +69,18 @@ footer {
     padding: 30px;
     text-align: center;
 }
-
+.container{
+    display: flex;
+    flex-flow: row wrap;
+}
+.logo{   
+    background-image : url('../img/otaku.png');
+}
+.directorio, .registro, .login{
+    flex-grow: 1;
+    padding: 10px; 
+    margin: 5px;
+}
 @media (max-width: 700px) {
     nav {
         flex-direction: column;

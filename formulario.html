@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <!--logo onii-chan-->
+            <div class="logo">ONII-CHAN</div>
+            <!--directorio pagina html-->
+            <div class="directorio">
+               <input id="buscar" type="text" placeholder="Buscar...">
+           </div>
+           <!--login-->
+            <div class="login">
+               <form id="loginform">
+                   <input type="text" name="usuario" placeholder="Usuario" required>                    
+                   <input type="password" placeholder="Contraseña" name="password" required>                    
+                   <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+               </form>
+           </div>
+        </div> 
+    </header>
+
+    <!-- NAV -->
+    <nav>
+
+        <a href="home.html">Home</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="formulario.html">Registrarse</a>
+        
+    </nav>
+
+    <form class="form-registro" action="show-data.html" target="_blank" method="GET">
+
+        <h1>Registrarse en onii-chan</h1>
+        
+        <p>Para registrarse en nuestro sitio solo ingrese sus datos personales :D</p>
+
+        <br>
+        
+        <label for="firstname">Nombre: </label>
+        <input size="30" type="text" name="firstname" placeholder="Ingrese su nombre aqui...">
+
+        <br><br>
+
+        <label for="lastname">Apellido:</label>
+        <input size="30" type="text" name="lastname" placeholder="Ingrese su apellido aqui...">
+
+        <br><br>
+
+        <label for="street">Direccion:</label>
+        <input size="30" type="text" name="address" placeholder="Ingrese su dirección aqui...">
+
+        <br><br>
+
+        <label for="city">Ciudad: </label>
+        <input size="30" type="text" name="city" placeholder="Ingrese su cuidad aqui...">
+
+        <br><br>
+
+        <label for="zipcode">Código Postal:</label>
+        <input size="30" type="text" name="zipcode" placeholder="Ingrese su codigo postal aqui...">
+
+        <br><br>
+
+        <label for="telefono">Telefono: </label>
+        <input size="30" type="tel" name="telefono" placeholder="Ingrese su telefono aqui...">
+
+        <br><br>
+
+        <label for="correo">Email: </label>
+        <input size="30" type="mail" name="correo" placeholder="Ingrese su Email aqui...">
+
+        <br><br>
+
+        <label for="BirthDate">Fecha Nacimiento: </label>
+        <input size="30" type="date" name="birthdate">
+            
+        <br><br>
+
+        <p>
+            Género: 
+            <input type="radio" name="gender" value="hombre" checked> Hombre
+            <input type="radio" name="gender" value="Mujer"> Mujer
+            <input type="radio" name="gender" value="Otro"> Otro
+        </p>
+
+        <br>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </div>
+
+    </form>
+
+    <footer>
+        <a href="home.html">Volver al Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </footer>
+
+</body>
+</html>

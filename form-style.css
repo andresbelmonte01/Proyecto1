@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    font-family: Arial;
+}
+
+header {
+    background-color: #F04386;
+    color: #2BCDF0;
+    padding: 45px;
+    font-size: 35px;
+    text-align: center;
+}
+
+nav {
+    background-color: #2BCDF0;
+    color: white;
+    display: flex;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #0D88A3;
+    color: #F0DC13;
+}
+
+.form-registro {
+    background-color: #F0DC13;
+    padding: 45px;
+}
+
+/* section {
+    background-color: #F0DC13;
+    color: #F04386;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+} */
+
+/* section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 300ms;
+    position: relative;
+} */
+
+/* section img:hover {
+    transform: scale(0.9);
+} */
+
+/* aside {
+    background-color: #F0DC13;
+    color: #F04386;
+    height: 400px;
+} */
+
+footer {
+    background-color: #2BCDF0;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.logo{   
+    background-image: url(img/otaku.png);
+}
+
+.directorio, .registro, .login{
+    flex-grow: 1;
+    padding: 10px; 
+    margin: 5px;
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
+    section {
+        grid-template-columns: 1fr 1fr;
+    }
+}

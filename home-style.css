@@ -73,17 +73,21 @@ footer {
     display: flex;
     flex-flow: row wrap;
 }
+
 .logo{   
-    background-image : url('../img/otaku.png');
+    background-image : url('img/otaku.png');
 }
+
 .directorio, .registro, .login{
     flex-grow: 1;
     padding: 10px; 
     margin: 5px;
 }
+
 #boton{
     
 }
+
 #resultado{
     position: fixed;
     top: 95px;
@@ -95,6 +99,7 @@ footer {
     overflow: hidden;
     display: none;
 }
+
 @media (max-width: 700px) {
     nav {
         flex-direction: column;

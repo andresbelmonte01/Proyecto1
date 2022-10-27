@@ -12,12 +12,70 @@
 
     <!-- HEADER -->
     <header>
+        
         <div class="container">
-            <!--logo onii-chan-->
-            <div class="logo">ONII-CHAN</div>
-            <!--directorio pagina html-->
-           
-        </div> 
+            
+             <!--logo onii-chan-->
+             <div class="logo">ONII-CHAN</div>
+            
+             <!--directorio pagina html-->
+             <div class="directorio">
+                <input id="buscar" type="text" placeholder="Buscar...">
+                <button id="boton" style="display: none;"></button>
+                <ul id="resultado" ></ul>
+            </div>
+            
+            <script>
+                
+                //listado de los animes de la pagina
+                const animes = [
+                    {link:'naruto.html',nombre: 'Naruto'},
+                    {link:'naruto.html',nombre: 'Code-geass'},
+                    {link:'naruto.html',nombre: 'Kill_La_Kill'},
+                    {link:'naruto.html',nombre: 'Onepiece'}
+                ]
+                const busqueda = document.querySelector('#buscar');   
+                const boton = document.querySelector('#boton');
+                const resultado = document.getElementById('resultado');
+                
+                
+
+                const filtro =()=>{
+                    resultado.innerHTML="";
+                    const texto = busqueda.value.toLowerCase();
+                    for(let anime of animes){
+                        let nombre = anime.nombre.toLocaleLowerCase();
+                        if(nombre.indexOf(texto) !== -1){
+                            resultado.style.display ="block";
+                            if(texto === ""){
+                                resultado.style.display ="none";
+                            }
+                            //despliega en el buscador los animes que van coincidiendo con el texto ingresado
+                            resultado.innerHTML += `<li><a href=${anime.link} style="text-decoration:none;color:black">${anime.nombre}</li>`
+                            
+                        }
+                    }
+                    if (resultado.innerHTML === ""){
+                        resultado.style.display ="No hay resultados";
+                    }
+                }
+
+                //document.getElementById("boton").addEventListener('click',filtro);
+                document.getElementById("buscar").addEventListener('keyup',filtro);
+
+            </script>
+
+            <!--login-->
+            <div class="login">
+                <form id="loginform">
+                    <input type="text" name="usuario" placeholder="Usuario" required>                    
+                    <input type="password" placeholder="Contraseña" name="password" required>                    
+                    <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                </form>
+            </div>
+            
+        </div>        
+        
     </header>
 
     <!-- NAV -->
